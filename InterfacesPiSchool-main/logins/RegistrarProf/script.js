@@ -17,21 +17,14 @@ const init = () => {
     submitButton.addEventListener("click", (event) => {
       event.preventDefault();
       let matricula;
-
-      var data = new FormData();
-      data.append("nome", inputEmail.value);
-      data.append("email", inputEmail.value);
-      data.append("curso", parseInt(inputCurso.value));
-      data.append("senha", inputPassword.value);
-      data.append("telefone", inputTelefone.value);
       
-     /* var data = JSON.stringify({
+        var data = JSON.stringify({
         "nome": inputNome.value,
         "email": inputEmail.value,
         "curso": parseInt(inputCurso.value),
         "senha": inputPassword.value,
         "telefone": inputTelefone.value
-      }); */
+      });
 
       const xhr = new XMLHttpRequest();
       xhr.open("POST", api + "Professor/cadastrar", false);
@@ -49,7 +42,7 @@ const init = () => {
           errorDiv.style.setProperty("display", "block");
         }, 500);
       } else {
-        history.back()
+        window.location.href="../../../excluir tirar professor/html.html"
       }
     });
   }

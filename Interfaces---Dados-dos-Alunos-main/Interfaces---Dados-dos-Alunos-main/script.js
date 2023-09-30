@@ -11,7 +11,7 @@ function apagaAluno(matricula) {
 }
 
 function retorna() {
-  history.back()
+  window.location.href="../../interface ADM/html.html"
 }
 
 const init = () => {

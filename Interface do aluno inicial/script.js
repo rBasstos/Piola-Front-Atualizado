@@ -37,21 +37,15 @@ const init = () => {
 };
 
 function cliqueCursos() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const matricula = parseInt(urlParams.get("m"));
-  window.location.href = "../Interface---Cursos-main/cursos.html?m=" + matricula;
+  window.location.href = "../Interface---Cursos-main/cursos.html";
 }
 
 function cliqueAjuda() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const matricula = parseInt(urlParams.get("m"));
-  window.location.href = "../interface ajuda aluno/interface ajuda.html?m=" + matricula;
+  window.location.href = "../interface ajuda aluno/interface ajuda.html";
 }
 
 function cliqueSair() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const matricula = parseInt(urlParams.get("m"));
-  window.location.href = "../sair/html.html?m=" + matricula;
+  window.location.href = "../sair/html.html";
 }
 
 window.onload = init;

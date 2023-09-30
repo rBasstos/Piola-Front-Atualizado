@@ -37,21 +37,15 @@ const init = () => {
 };
 
 function cliqueAlunos() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const matricula = parseInt(urlParams.get("m"));
-  window.location.href = "../Interfaces---Dados-dos-Alunos-main/Interfaces---Dados-dos-Alunos-main/indexdados.html?m=" + matricula;
+  window.location.href = "../Interfaces---Dados-dos-Alunos-main/Interfaces---Dados-dos-Alunos-main/indexdados.html";
 }
 
 function cliqueProfessor() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const matricula = parseInt(urlParams.get("m"));
-  window.location.href = "../excluir tirar professor/html.html?m=" + matricula;
+  window.location.href = "../excluir tirar professor/html.html";
 }
 
 function cliqueSair() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const matricula = parseInt(urlParams.get("m"));
-  window.location.href = "../sair/html.html?m=" + matricula;
+  window.location.href = "../sair/html.html";
 }
 
 

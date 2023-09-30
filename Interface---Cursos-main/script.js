@@ -32,16 +32,4 @@ const init = () => {
   }
 };
 
-function cliqueAjuda() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const matricula = parseInt(urlParams.get("m"));
-  window.location.href = "../interface ajuda aluno/interface ajuda.html?m=" + matricula;
-}
-
-function cliqueSair() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const matricula = parseInt(urlParams.get("m"));
-  window.location.href = "../sair/html.html?m=" + matricula;
-}
-
 window.onload = init;
