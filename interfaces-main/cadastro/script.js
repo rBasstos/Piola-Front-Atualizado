@@ -24,7 +24,7 @@ const init = () => {
       });
 
       const xhr = new XMLHttpRequest();
-      xhr.open("POST", api + "Aluno", false);
+      xhr.open("POST", api + "Aluno/cadastrar", false);
       xhr.setRequestHeader("Content-Type", "application/JSON")
       xhr.onload = function (e) {
         //location.reload()
