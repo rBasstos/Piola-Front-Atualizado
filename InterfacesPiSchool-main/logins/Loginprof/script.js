@@ -34,9 +34,23 @@ const init = () => {
           errorDiv.style.setProperty("display", "block");
         }, 500);
       } else {
-        Cookies.set("login", matricula) 
-        console.log(xhr.responseText)
-        window.location.href = "../../../tela inicial professor/html.html?m=" + matricula;
+        var cookie
+        const xhr2 = new XMLHttpRequest();
+        xhr2.open("GET", api + "Professor/" + matricula, false);
+        xhr2.onload = function (e) {
+            var prof = JSON.parse(xhr2.response);
+            cookie = JSON.stringify({
+            "nome": prof.nome,
+            "email": prof.email,
+            "telefone": prof.telefone,
+            "matricula": matricula,
+            "tipo": "professor"
+          });
+        };
+        xhr2.send()
+        Cookies.set("login", cookie) 
+        console.log(cookie)
+        window.location.href = "../../../tela inicial professor/html.html";
       }
     });
   }

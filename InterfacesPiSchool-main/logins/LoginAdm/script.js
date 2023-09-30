@@ -7,7 +7,8 @@ const init = () => {
   const errorDiv = document.getElementById("error");
   const errorMsg = document.getElementById("errormsg");
   const api = new URL("http://localhost:8080");
-
+  var login = Cookies.get("login")
+  
   console.log(inputEmail, inputPassword, submitButton, errorDiv, errorMsg);
 
   if (submitButton) {
@@ -33,7 +34,23 @@ const init = () => {
           errorDiv.style.setProperty("display", "block");
         }, 500);
       } else {
-        window.location.href = "../../../interface ADM/html.html?m=" + matricula;
+        var cookie
+        const xhr2 = new XMLHttpRequest();
+        xhr2.open("GET", api + "Administrador/" + matricula, false);
+        xhr2.onload = function (e) {
+            var prof = JSON.parse(xhr2.response);
+            cookie = JSON.stringify({
+            "nome": prof.nome,
+            "email": prof.email,
+            "telefone": prof.telefone,
+            "matricula": matricula,
+            "tipo": "administrador"
+          });
+        };
+        xhr2.send()
+        Cookies.set("login", cookie) 
+        console.log(cookie)
+        window.location.href = "../../../interface ADM/html.html";
       }
     });
   }

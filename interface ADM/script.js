@@ -4,8 +4,12 @@ const init = () => {
   const nome = document.getElementById("nome");
   const email = document.getElementById("email");
 
-  const urlParams = new URLSearchParams(window.location.search);
-  const matricula = parseInt(urlParams.get("m"));
+  var cookie = JSON.parse(Cookies.get("login"));
+  if(!cookie){
+  window.location.href = "../seleção de login/html.html";
+  }
+  //const urlParams = new URLSearchParams(window.location.search);
+  const matricula = cookie.matricula;
   const api = new URL("http://localhost:8080");
 
   let lista;
