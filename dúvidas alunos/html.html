@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
     <link rel="stylesheet" href="./css/stylesdados.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +19,7 @@
   <header id="cabeçalho">
     <nav>
       <ul id="menu">
-        <a href="#" onclick="retorna()">
+        <a href="#" onclick="retornar()">
             <i class="fa-solid fa-arrow-left-long fa-lg"></i> </a>
         <li class="ajuda"><p>Mensagem</p></li>
         <img src="./imagens/LOGOA.jpg" class="logo">
@@ -40,20 +42,17 @@
       </div>
 
       <form action="" class="formPost" id="formPost">
-        <textarea name="textarea" placeholder="Tire suas dúvidas!" id="textarea"></textarea>
+        <textarea name="textarea" placeholder="Tire suas dúvidas!" id="duvida"></textarea>
         <div class="iconsAndButton">
          
 
-          <button type="submit" id="botao" class="btnSubmitForm">Enviar</button>
+          <button type="submit" id="confirmar" class="btnSubmitForm">Enviar</button>
         </div>
       </form>
     </div>
 
-    <ul class="posts" id="posts"></ul>
-    <div class="comment-list" id="commentList"></div>
-        <!-- Os comentários serão adicionados aqui com JavaScript -->
+    <div id="msg" style="display: none;" class="msgDuvida">
+      
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
