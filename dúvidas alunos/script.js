@@ -22,7 +22,7 @@ const init = () => {
       const xhr = new XMLHttpRequest();
       xhr.open("POST", api + "duvidas", false);
       xhr.onload = function (e) {
-      msgDiv.innerHTML = '<p>Sua duvida foi enviada, aguarde resposta por email</p>'
+      msgDiv.innerHTML = '<p>Sua dúvida foi enviada,<br />aguarde resposta por email</p>'
       msgDiv.style.setProperty("display", "block");
       setTimeout(() => {
         location.reload()

@@ -124,3 +124,17 @@ button {
   margin-top: 40px;
   border-radius: 10px;
 }
+
+.msgok{
+  background-color:#ffffff;
+  border-color: #3b5c77;
+  border-style: solid;
+  color: rgb(0, 0, 0);
+  border-width: 1ßpx;
+  width: 400px;
+  margin: 0 auto;
+  padding: 12px;
+  border-radius: 6px;
+  font-family: 'Lexend Exa', sans-serif; 
+
+}
