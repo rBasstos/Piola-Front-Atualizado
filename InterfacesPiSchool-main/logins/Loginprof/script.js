@@ -44,6 +44,7 @@ const init = () => {
             "email": prof.email,
             "telefone": prof.telefone,
             "matricula": matricula,
+            "curso": prof.curso,
             "tipo": "professor"
           });
         };
